@@ -48,7 +48,7 @@ async def get_response(url, params):
 
 # Начало и запись id в базу данных
 async def start(update, context):
-    await update.message.reply_text("Я мультибот. Чтобы узнать все мои возможности нажмите /help .", reply_markup=markup)
+    await update.message.reply_text("Я мультибот. Чтобы узнать все мои возможности нажмите /help.", reply_markup=markup)
     connect = sqlite3.connect('users.db')
     cursor = connect.cursor()
     cursor.execute("""CREATE TABLE IF NOT EXISTS login_id(
